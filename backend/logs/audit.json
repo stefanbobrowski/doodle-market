@@ -1,0 +1,85 @@
+[
+  {
+    "timestamp": "2026-04-20T22:05:25.638Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 151
+    }
+  },
+  {
+    "timestamp": "2026-04-20T22:06:12.068Z",
+    "event": "Doodle Liked",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "likes": 31
+    }
+  },
+  {
+    "timestamp": "2026-04-20T22:06:23.595Z",
+    "event": "Doodle Updated",
+    "data": {
+      "id": 1,
+      "title": "Updated Title",
+      "description": "Updated Description",
+      "price": 50.25,
+      "imagePath": "/assets/cat.jpg",
+      "views": 151,
+      "likes": 31
+    }
+  },
+  {
+    "timestamp": "2026-04-20T22:09:42.159Z",
+    "event": "Doodle Updated",
+    "data": {
+      "title": "Updated Title",
+      "description": "Updated Description",
+      "price": 50.25
+    }
+  },
+  {
+    "timestamp": "2026-04-20T22:10:37.001Z",
+    "event": "Doodle Deleted",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "description": "A cute doodle of a cat.",
+      "price": 5.99,
+      "imagePath": "/assets/cat.jpg",
+      "views": 150,
+      "likes": 30
+    }
+  },
+  {
+    "timestamp": "2026-04-20T22:10:45.898Z",
+    "event": "Doodle Added",
+    "data": {
+      "id": 3,
+      "views": 0,
+      "likes": 0,
+      "title": "My Test Doodle",
+      "description": "Test adding a doodle",
+      "price": 9.99,
+      "imagePath": "/uploads/207aad3e075c886388835096e283f5ad"
+    }
+  },
+  {
+    "timestamp": "2026-04-20T22:10:57.746Z",
+    "event": "Doodle Updated",
+    "data": {
+      "title": "Updated Title",
+      "description": "Updated Description",
+      "price": 50.25
+    }
+  },
+  {
+    "timestamp": "2026-04-20T22:11:34.533Z",
+    "event": "Doodle Updated",
+    "data": {
+      "title": "Updated Title 2",
+      "description": "Updated Description 2"
+    }
+  }
+]

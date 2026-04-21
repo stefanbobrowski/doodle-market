@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Funny Cat Doodle",
+    "description": "A cute doodle of a cat.",
+    "price": 5.99,
+    "imagePath": "/assets/cat.jpg",
+    "views": 150,
+    "likes": 30
+  },
+  {
+    "id": 2,
+    "title": "Sun Doodle",
+    "description": "A detailed sketch of a sun.",
+    "price": 7.5,
+    "imagePath": "/assets/sun.jpg",
+    "views": 200,
+    "likes": 45
+  },
+  {
+    "id": 3,
+    "title": "Abstract Art Piece",
+    "description": "An abstract doodle with vibrant colors.",
+    "price": 10.0,
+    "imagePath": "/assets/dotsinspace.png",
+    "views": 300,
+    "likes": 60
+  }
+]
