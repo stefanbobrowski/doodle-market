@@ -1,12 +1,12 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 
 interface BadgeProps {
   variant?: 'default' | 'success' | 'warning' | 'error' | 'info';
-  children: React.ReactNode;
+  children: ReactNode;
   // Add other props like size, etc.
 }
 
-const Badge: React.FC<BadgeProps> = ({ variant = 'default', children }) => {
+const Badge = ({ variant = 'default', children }: BadgeProps) => {
   return <span className={`badge badge--${variant}`}>{children}</span>;
 };
 

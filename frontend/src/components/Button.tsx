@@ -1,14 +1,12 @@
+import type { ReactNode } from 'react';
+
 interface ButtonProps {
   variant?: 'default' | 'primary' | 'ghost' | 'outline';
-  children: React.ReactNode;
+  children: ReactNode;
   onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  variant = 'default',
-  children,
-  onClick,
-}) => {
+const Button = ({ variant = 'default', children, onClick }: ButtonProps) => {
   return (
     <button className={`btn btn--${variant}`} onClick={onClick}>
       {children}

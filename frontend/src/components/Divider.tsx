@@ -1,14 +1,12 @@
-import React from 'react';
-
 interface DividerProps {
   spacing?: 'sm' | 'md' | 'lg';
   orientation?: 'horizontal' | 'vertical';
 }
 
-const Divider: React.FC<DividerProps> = ({
+const Divider = ({
   spacing = 'md',
   orientation = 'horizontal',
-}) => {
+}: DividerProps) => {
   return (
     <hr
       className={`divider divider--${orientation} divider--spacing-${spacing}`}
