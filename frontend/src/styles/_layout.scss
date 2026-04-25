@@ -1,0 +1,39 @@
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  margin: 0 16px;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+header {
+  padding: 20px 32px;
+  border-bottom: 1px solid var(--border-color);
+
+  nav {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+main.main-content {
+  flex: 1;
+  padding: 32px;
+}
+
+footer {
+  padding: 20px 32px;
+  border-top: 1px solid var(--border-color);
+  color: #867e8e;
+}
+
+.flex {
+  display: flex;
+  gap: 16px;
+}

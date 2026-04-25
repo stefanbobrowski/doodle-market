@@ -1,22 +1,7 @@
-@use 'tokens/colors' as tokens-colors;
-@use 'tokens/radius' as tokens-radius;
-@use 'tokens/spacing' as tokens-spacing;
-@use 'tokens/typography' as tokens-typography;
-@use 'tokens/zindex' as tokens-zindex;
+@use 'reset';
+@use 'colors';
+@use 'typography';
+@use 'layout';
 
-@use 'base/reset';
-@use 'base/base';
-@use 'base/typography';
-@use 'components/button';
-@use 'components/card';
-@use 'components/badge';
 @use 'components/divider';
-@use 'components/header';
-@use 'components/footer';
-@use 'layouts/layout';
-@use 'layouts/container';
-@use 'layouts/grid';
-@use 'layouts/stack';
-@use 'utilities/spacing';
-@use 'utilities/visibility';
-@use 'utilities/text';
+@use 'components/button';

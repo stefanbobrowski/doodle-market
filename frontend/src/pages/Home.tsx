@@ -25,12 +25,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='home'>
+    <div>
       <h1>Welcome to Doodle Market</h1>
-      <p>Discover and share amazing doodles!</p>
-
+      <p className='muted'>Discover and share amazing doodles!</p>
       {loading && <div>Loading...</div>}
-      {error && <div>Error: {error}</div>}
+      {error && <code className='error'>Error: {error}</code>}
       {doodles && doodles.length > 0 && (
         <div>
           {doodles.map((doodle) => (

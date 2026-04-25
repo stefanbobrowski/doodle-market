@@ -1,10 +1,22 @@
+import { NavLink } from 'react-router-dom';
+
 export const Header = () => {
   return (
-    <div className='header'>
+    <header>
       <nav>
-        <a href='/'>Home</a>
-        <a href='/style-guide'>Style Guide</a>
+        <NavLink
+          to='/'
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          Doodle Market
+        </NavLink>
+        <NavLink
+          to='/style-guide'
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          Style Guide
+        </NavLink>
       </nav>
-    </div>
+    </header>
   );
 };

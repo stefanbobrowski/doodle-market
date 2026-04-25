@@ -1,0 +1,63 @@
+body {
+  font-family: Inter, sans-serif;
+}
+
+nav {
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+}
+
+p {
+  margin-bottom: 16px;
+  line-height: 28px;
+}
+
+a {
+  color: var(--link-color);
+  transition: 0.15s color cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.active {
+    color: var(--link-color);
+  }
+
+  &:hover {
+    color: var(--hover-link-color);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--text-muted-color);
+}
+
+.error {
+  color: var(--error-color);
+}
+
+pre {
+  display: block;
+  margin: 16px 0;
+}
+
+code {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 16px;
+  background-color: #14121a;
+}
+
+pre code {
+  display: block;
+  padding: 16px;
+}
