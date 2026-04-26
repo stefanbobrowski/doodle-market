@@ -1,30 +1,32 @@
 import { useState, useEffect } from 'react';
-import type { Doodle } from '../types/doodle';
+import { useLocation } from 'react-router-dom';
 import DoodleCard from '../components/DoodleCard';
 import LoadingSpinner from '../components/LoadingSpinner';
+import type { Doodle } from '../types/doodle';
 
 const Home = () => {
+  const location = useLocation();
   const [doodles, setDoodles] = useState<Doodle[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/api/doodles') // Proxies to your Express backend
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((data) => {
+    const fetchDoodles = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch('/api/doodles');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
         setDoodles(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Something went wrong');
+      } finally {
         setLoading(false);
-      })
-      .catch((error) => {
-        setError(error.message);
-        setLoading(false);
-      });
-  }, []);
+      }
+    };
+
+    fetchDoodles();
+  }, [location.key]);
 
   return (
     <div>

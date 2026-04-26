@@ -81,5 +81,131 @@
       "title": "Updated Title 2",
       "description": "Updated Description 2"
     }
+  },
+  {
+    "timestamp": "2026-04-26T01:23:23.185Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 201
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:23:23.187Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 202
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:23:28.939Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 201
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:23:28.943Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 202
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:23:32.058Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 201
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:23:32.061Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 202
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:23:34.227Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 3,
+      "title": "Abstract Art Piece",
+      "views": 301
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:23:34.230Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 3,
+      "title": "Abstract Art Piece",
+      "views": 302
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:24:45.125Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 201
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:24:45.129Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 202
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:24:48.490Z",
+    "event": "Doodle Liked",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "likes": 46
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:28:37.953Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 3,
+      "title": "Abstract Art Piece",
+      "views": 301
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:28:37.956Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 3,
+      "title": "Abstract Art Piece",
+      "views": 302
+    }
+  },
+  {
+    "timestamp": "2026-04-26T01:28:40.164Z",
+    "event": "Doodle Liked",
+    "data": {
+      "id": 3,
+      "title": "Abstract Art Piece",
+      "likes": 61
+    }
   }
 ]

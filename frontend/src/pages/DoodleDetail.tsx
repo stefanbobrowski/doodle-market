@@ -10,9 +10,20 @@ const DoodleDetail = () => {
   const [doodle, setDoodle] = useState<Doodle | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [liked, setLiked] = useState(false);
 
   useEffect(() => {
     if (!id) return;
+
+    const incrementView = async () => {
+      try {
+        await fetch(`/api/doodles/${id}/view`, {
+          method: 'POST',
+        });
+      } catch (err) {
+        console.error('Failed to increment view count', err);
+      }
+    };
 
     const fetchDoodle = async () => {
       try {
@@ -28,7 +39,23 @@ const DoodleDetail = () => {
     };
 
     fetchDoodle();
+    incrementView();
   }, [id]);
+
+  const handleLike = async () => {
+    if (liked || !id) return;
+    try {
+      const response = await fetch(`/api/doodles/${id}/like`, {
+        method: 'POST',
+      });
+      if (!response.ok) throw new Error('Failed to like');
+      const data = await response.json();
+      setDoodle((prev) => (prev ? { ...prev, likes: data.likes } : prev));
+      setLiked(true);
+    } catch (err) {
+      console.error('Failed to increment like count', err);
+    }
+  };
 
   if (loading) return <LoadingSpinner />;
   if (error)
@@ -52,6 +79,13 @@ const DoodleDetail = () => {
       <p>
         Views: {doodle.views} | Likes: {doodle.likes}
       </p>
+      <button
+        onClick={handleLike}
+        disabled={liked}
+        aria-label='Like this doodle'
+      >
+        👍 {liked ? 'Liked' : 'Like'}
+      </button>
       <Button variant='special' onClick={() => alert('Buy now!')}>
         Buy Now
       </Button>
