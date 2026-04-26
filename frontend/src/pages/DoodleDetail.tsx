@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Button from '../components/Button';
+import LoadingSpinner from '../components/LoadingSpinner';
 import type { Doodle } from '../types/doodle';
 
 const DoodleDetail = () => {
@@ -29,8 +30,16 @@ const DoodleDetail = () => {
     fetchDoodle();
   }, [id]);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (loading) return <LoadingSpinner />;
+  if (error)
+    return (
+      <div>
+        <Link to='/' className='back-link'>
+          ← Back to Home
+        </Link>
+        <div className='error'>Error: {error}</div>
+      </div>
+    );
   if (!doodle) return <div>Doodle not found</div>;
 
   return (

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { Doodle } from '../types/doodle';
 import DoodleCard from '../components/DoodleCard';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const Home = () => {
   const [doodles, setDoodles] = useState<Doodle[]>([]);
@@ -29,8 +30,12 @@ const Home = () => {
     <div>
       <h1>Welcome to Doodle Market</h1>
       <p className='muted'>Discover and share amazing doodles!</p>
-      {loading && <div>Loading...</div>}
-      {error && <code className='error'>Error: {error}</code>}
+      {loading && <LoadingSpinner />}
+      {error && (
+        <pre>
+          <code className='error'>Error: {error}</code>
+        </pre>
+      )}
       {doodles && doodles.length > 0 && (
         <div className='grid'>
           {doodles.map((doodle) => (

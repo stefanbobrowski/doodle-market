@@ -1,5 +1,6 @@
 import Button from '../components/Button';
 import Divider from '../components/Divider';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 export default function StyleGuide() {
   return (
@@ -36,9 +37,11 @@ export default function StyleGuide() {
             This is a paragraph with a <a href='#'>link</a> and some{' '}
             <code>inline code</code>.
           </p>
-          <p className='error'>Some error text.</p>
+          <p className='error'>Error: Some error text</p>
           <pre>
-            <code className='error'>Some error text in the a code block</code>
+            <code className='error'>
+              Error: Some error text in a code block
+            </code>
           </pre>
           <pre>
             <code>
@@ -50,6 +53,11 @@ export default function StyleGuide() {
         </section>
 
         <Divider />
+        <section>
+          <h2>Loading Spinner</h2>
+          <LoadingSpinner />
+        </section>
+        <Divider />
 
         <section>
           <h2>Buttons</h2>
@@ -58,8 +66,6 @@ export default function StyleGuide() {
             <Button variant='special'>Special Button</Button>
           </div>
         </section>
-
-        <Divider />
       </div>
     </div>
   );
