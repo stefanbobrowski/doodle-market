@@ -13,7 +13,7 @@ router.post('/', (req, res) => {
   res.send('<h1>Got a POST request</h1>');
 });
 
-// Mount doodle routes
+// Doodle routes
 router.use('/doodles', doodlesRouter);
 
 router.use('/doodles', interactionsRouter);

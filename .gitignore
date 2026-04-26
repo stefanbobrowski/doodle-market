@@ -40,3 +40,7 @@ coverage/
 .cache/
 *.tsbuildinfo
 *.local
+features.txt
+
+# Database
+backend/src/data/*.db

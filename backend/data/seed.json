@@ -4,7 +4,7 @@
     "title": "Funny Cat Doodle",
     "description": "A cute doodle of a cat.",
     "price": 5.99,
-    "imagePath": "/assets/cat.jpg",
+    "imagePath": "/uploads/cat.jpg",
     "views": 150,
     "likes": 30
   },
@@ -13,16 +13,16 @@
     "title": "Sun Doodle",
     "description": "A detailed doodle of a bright sun.",
     "price": 7.5,
-    "imagePath": "/assets/sun.jpg",
+    "imagePath": "/uploads/sun.jpg",
     "views": 200,
     "likes": 45
   },
   {
     "id": 3,
-    "title": "Abstract Art Piece",
+    "title": "Abstract Doodle",
     "description": "An abstract doodle with vibrant colors. It has smaller dimensions and a much longer description to test the text truncation in the UI. This doodle is perfect for those who love modern art and want to add a splash of color to their space.",
     "price": 10.0,
-    "imagePath": "/assets/dotsinspace.png",
+    "imagePath": "/uploads/dotsinspace.png",
     "views": 300,
     "likes": 60
   }

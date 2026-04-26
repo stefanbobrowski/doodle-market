@@ -17,7 +17,7 @@ const DoodleCard = (doodle: Doodle) => {
           <span className='doodle-views'>{doodle.views} views</span>
           <span className='doodle-likes'>{doodle.likes} likes</span>
         </div>
-        <span className='doodle-price'>${doodle.price}</span>
+        <span className='doodle-price'>${doodle.price.toFixed(2)}</span>
       </div>
     </div>
   );

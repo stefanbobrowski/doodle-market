@@ -8,9 +8,7 @@ const Divider = ({
   orientation = 'horizontal',
 }: DividerProps) => {
   return (
-    <hr
-      className={`divider divider--${orientation} divider--spacing-${spacing}`}
-    />
+    <hr className={`divider ${orientation} divider--spacing-${spacing}`} />
   );
 };
 

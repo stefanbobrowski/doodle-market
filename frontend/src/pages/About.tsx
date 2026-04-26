@@ -20,22 +20,22 @@ const About = () => {
         >
           Stefan Bobrowski
         </a>{' '}
-        with Vite, React, TypeScript, and Express.js
+        with Vite, React, TypeScript, Express.js, and better-sqlite3.
       </p>
-      <p className='logo-row'>
+      <div className='logo-row'>
         <div>
-          <img src={viteLogo} alt='Vite Logo' />
+          <img src={viteLogo} alt='Vite Logo' title='Vite' />
         </div>
         <div>
-          <img src={reactLogo} alt='React Logo' />
+          <img src={reactLogo} alt='React Logo' title='React' />
         </div>
         <div>
-          <img src={typeScriptLogo} alt='TypeScript Logo' />
+          <img src={typeScriptLogo} alt='TypeScript Logo' title='TypeScript' />
         </div>
         <div>
-          <img src={expressLogo} alt='Express Logo' />
+          <img src={expressLogo} alt='Express Logo' title='Express.js' />
         </div>
-      </p>
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
-      '/assets': {
+      '/uploads': {
         target: 'http://localhost:7777',
         changeOrigin: true,
       },

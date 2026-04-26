@@ -62,8 +62,7 @@ router.patch('/:id', upload.single('imagePath'), (req, res) => {
   const updateData: Partial<Omit<Doodle, 'id'>> = { ...req.body };
   if (req.file) {
     updateData.imagePath = `/uploads/${req.file.filename}`;
-    // Optional: Delete the old file to save space
-    // (You'll need to import fs and handle errors)
+    // Delete the old file
     const oldPath = path.join(process.cwd(), doodle.imagePath);
     fs.unlink(oldPath, (err) => {
       if (err) console.error('Failed to delete old image:', err);

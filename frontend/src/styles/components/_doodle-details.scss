@@ -1,0 +1,21 @@
+.doodle-details {
+  .doodle-image {
+    margin-bottom: 20px;
+  }
+
+  .doodle-description {
+    color: var(--text-muted-color);
+  }
+
+  .doodle-stats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .doodle-price {
+    font-size: 1.25rem;
+    color: var(--price-color);
+  }
+}
