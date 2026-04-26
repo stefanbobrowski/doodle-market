@@ -33,7 +33,15 @@ footer {
   color: #867e8e;
 }
 
+// Utility Layout
+
 .flex {
   display: flex;
   gap: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 24px;
 }

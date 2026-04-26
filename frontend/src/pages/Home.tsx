@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { Doodle } from '../types/doodle';
+import DoodleCard from '../components/DoodleCard';
 
 const Home = () => {
   const [doodles, setDoodles] = useState<Doodle[]>([]);
@@ -31,16 +32,9 @@ const Home = () => {
       {loading && <div>Loading...</div>}
       {error && <code className='error'>Error: {error}</code>}
       {doodles && doodles.length > 0 && (
-        <div>
+        <div className='grid'>
           {doodles.map((doodle) => (
-            <div key={doodle.id}>
-              <img src={doodle.imagePath} alt={doodle.title} />
-              <span>{doodle.title}</span>
-              <span>{doodle.description}</span>
-              <span>${doodle.price}</span>
-              <span>Views: {doodle.views}</span>
-              <span>Likes {doodle.likes}</span>
-            </div>
+            <DoodleCard key={doodle.id} {...doodle} />
           ))}
         </div>
       )}

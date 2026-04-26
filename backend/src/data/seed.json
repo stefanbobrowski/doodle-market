@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "Sun Doodle",
-    "description": "A detailed sketch of a sun.",
+    "description": "A detailed doodle of a bright sun.",
     "price": 7.5,
     "imagePath": "/assets/sun.jpg",
     "views": 200,
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "title": "Abstract Art Piece",
-    "description": "An abstract doodle with vibrant colors.",
+    "description": "An abstract doodle with vibrant colors. It has smaller dimensions and a much longer description to test the text truncation in the UI. This doodle is perfect for those who love modern art and want to add a splash of color to their space.",
     "price": 10.0,
     "imagePath": "/assets/dotsinspace.png",
     "views": 300,

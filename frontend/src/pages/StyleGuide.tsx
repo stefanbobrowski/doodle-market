@@ -18,6 +18,16 @@ export default function StyleGuide() {
           <h3>Heading 3</h3>
           <h4>Heading 4</h4>
           <p>
+            This is a really long paragraph. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. This is a really long paragraph.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. This is
+            a really long paragraph. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <p>
             This is a paragraph with <strong>bold text</strong> and{' '}
             <em>italic text</em>.
           </p>

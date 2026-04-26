@@ -10,8 +10,10 @@ nav {
 }
 
 p {
+  max-width: 720px;
   margin-bottom: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 a {
@@ -35,6 +37,23 @@ h5,
 h6 {
   margin-bottom: 16px;
   font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
 }
 
 .muted {
@@ -53,7 +72,7 @@ pre {
 code {
   display: inline-block;
   font-family: monospace;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #14121a;
 }
 
