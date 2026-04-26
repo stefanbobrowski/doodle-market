@@ -18,6 +18,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+/backend/logs/
 
 # OS Files
 .DS_Store
@@ -43,4 +44,4 @@ coverage/
 features.txt
 
 # Database
-backend/src/data/*.db
+backend/data/*.db
