@@ -6,4 +6,5 @@ export interface Doodle {
   imagePath: string;
   views: number;
   likes: number;
+  userId: number | null;
 }

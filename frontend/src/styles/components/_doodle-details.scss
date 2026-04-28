@@ -1,6 +1,13 @@
 .doodle-details {
+  max-width: 640px;
+
   .doodle-image {
     margin-bottom: 20px;
+
+    img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
   }
 
   .doodle-description {
@@ -17,5 +24,59 @@
   .doodle-price {
     font-size: 1.25rem;
     color: var(--price-color);
+  }
+}
+
+.doodle-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 8px;
+
+  h1 {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+.owner-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-top: 8px;
+}
+
+.confirm-delete {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 520px;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 12px;
+
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
+.btn.danger {
+  min-width: unset;
+  margin-bottom: 0;
+  border: 1px solid var(--error-color);
+  color: var(--error-color);
+
+  &:hover {
+    background-color: var(--error-color);
+    color: var(--text-color);
   }
 }

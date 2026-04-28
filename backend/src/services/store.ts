@@ -1,15 +1,8 @@
-import Database from 'better-sqlite3';
 import path from 'path';
+import fs from 'fs';
 import { Doodle } from '../types/doodle.js';
 import { logEvent } from './logger.js';
-import fs from 'fs';
-
-const DB_PATH = path.join(process.cwd(), 'data', 'doodles.db');
-
-// Ensure the data directory exists
-fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
-
-const db = new Database(DB_PATH);
+import db from './db.js';
 
 // Create table and seed if empty
 db.exec(`
@@ -20,9 +13,17 @@ db.exec(`
     price REAL NOT NULL,
     imagePath TEXT NOT NULL,
     views INTEGER NOT NULL DEFAULT 0,
-    likes INTEGER NOT NULL DEFAULT 0
+    likes INTEGER NOT NULL DEFAULT 0,
+    userId INTEGER REFERENCES users(id)
   )
 `);
+
+// Add userId column to existing databases that predate this migration
+try {
+  db.exec('ALTER TABLE doodles ADD COLUMN userId INTEGER REFERENCES users(id)');
+} catch {
+  // Column already exists, nothing to do
+}
 
 const seedIfEmpty = () => {
   const count = (
@@ -35,7 +36,7 @@ const seedIfEmpty = () => {
   const seedPath = path.join(process.cwd(), 'data/seed.json');
   const seed: Doodle[] = JSON.parse(fs.readFileSync(seedPath, 'utf-8'));
   const insert = db.prepare(
-    'INSERT INTO doodles (id, title, description, price, imagePath, views, likes) VALUES (@id, @title, @description, @price, @imagePath, @views, @likes)'
+    'INSERT INTO doodles (id, title, description, price, imagePath, views, likes, userId) VALUES (@id, @title, @description, @price, @imagePath, @views, @likes, @userId)'
   );
   const insertMany = db.transaction((doodles: Doodle[]) => {
     for (const doodle of doodles) insert.run(doodle);
@@ -72,7 +73,7 @@ export const addDoodle = (
 
   const result = db
     .prepare(
-      'INSERT INTO doodles (title, description, price, imagePath, views, likes) VALUES (@title, @description, @price, @imagePath, 0, 0)'
+      'INSERT INTO doodles (title, description, price, imagePath, views, likes, userId) VALUES (@title, @description, @price, @imagePath, 0, 0, @userId)'
     )
     .run(newDoodleData);
 

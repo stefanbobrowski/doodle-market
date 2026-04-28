@@ -11,7 +11,7 @@
       """) )"""
 ```
 
-A full-stack Vite, React, TypeScript, Express app for uploading, selling, rating, and downloading doodles. Demonstrates backend concepts like orchestration, aggregation, business logic, media file handling, audit logging, and rate limiting.
+A full-stack Vite, React, TypeScript, Express app for uploading, selling, rating, and downloading doodles. Demonstrates backend concepts like authentication, orchestration, aggregation, business logic, media file handling, audit logging, and rate limiting.
 
 ## Features
 
@@ -21,12 +21,17 @@ A full-stack Vite, React, TypeScript, Express app for uploading, selling, rating
 - **Audit Logging**: All actions (uploads, updates, likes) are logged for review.
 - **Rate Limiting**: Prevents spam uploads with configurable limits.
 - **Image Processing**: Automatic resizing and compression for consistent quality.
-- **In-Memory Store**: Simple data persistence (resets on restart).
+- **Persistent Data**: Fast synchronous data storage with better-sqlite3
+- **Users + Auth**: Simple account login with demo users and Auth context.
+- **Purchase Flow with Email confirmation** - Demo account balance with purchase confirmation email.
+- **Multi-layer Moderdation**: Text and Image content moderation with Google Cloud Vision and Perspective API.
+  **Google Cloud Platform integration**: Deployed and Hosted on GCP.
 
 ## Tech Stack
 
 - **Frontend**: Vite, React, TypeScript
 - **Backend**: Express.js, TypeScript
+- **Database**: better-sqlite3
 
 ## API Endpoints
 

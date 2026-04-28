@@ -13,6 +13,9 @@ body {
 }
 
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px 32px;
   border-bottom: 1px solid var(--border-color);
 
@@ -20,6 +23,40 @@ header {
     display: flex;
     gap: 16px;
   }
+}
+
+.header-auth {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-user {
+  font-size: 0.9rem;
+}
+
+.user-role-badge {
+  margin-left: 6px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--bg-color);
+  background: var(--link-color);
+}
+
+.header-balance {
+  font-size: 0.9rem;
+  color: var(--price-color);
+}
+
+.header-btn {
+  min-width: unset;
+  margin-bottom: 0;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 
 main.main-content {

@@ -22,9 +22,27 @@
     background-color: var(--surface-color);
   }
 
+  .doodle-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
   .doodle-title {
     font-size: 1.2rem;
     text-decoration: none;
+  }
+
+  .owner-badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--bg-color);
+    background: var(--link-color);
+    white-space: nowrap;
   }
 
   .doodle-description {

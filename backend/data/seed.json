@@ -6,7 +6,8 @@
     "price": 5.99,
     "imagePath": "/uploads/cat.jpg",
     "views": 150,
-    "likes": 30
+    "likes": 30,
+    "userId": 1
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "price": 7.5,
     "imagePath": "/uploads/sun.jpg",
     "views": 200,
-    "likes": 45
+    "likes": 45,
+    "userId": 1
   },
   {
     "id": 3,
@@ -24,6 +26,7 @@
     "price": 10.0,
     "imagePath": "/uploads/dotsinspace.png",
     "views": 300,
-    "likes": 60
+    "likes": 60,
+    "userId": 1
   }
 ]
