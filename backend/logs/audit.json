@@ -1117,5 +1117,392 @@
       "title": "Computer Doodle",
       "views": 46
     }
+  },
+  {
+    "timestamp": "2026-04-28T20:52:24.667Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 203
+    }
+  },
+  {
+    "timestamp": "2026-04-28T20:52:24.672Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 204
+    }
+  },
+  {
+    "timestamp": "2026-04-28T20:53:39.095Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 205
+    }
+  },
+  {
+    "timestamp": "2026-04-28T20:53:39.103Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 206
+    }
+  },
+  {
+    "timestamp": "2026-04-28T20:56:12.345Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 207
+    }
+  },
+  {
+    "timestamp": "2026-04-28T20:56:12.352Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 208
+    }
+  },
+  {
+    "timestamp": "2026-04-28T20:58:00.177Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 209
+    }
+  },
+  {
+    "timestamp": "2026-04-28T20:58:00.185Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 210
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:06:36.508Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 47
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:06:36.513Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 48
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:09:27.059Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 58
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:09:27.062Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 59
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:09:48.906Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 60
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:09:48.909Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 61
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:10:09.192Z",
+    "event": "Doodle Purchased",
+    "data": {
+      "doodleId": 5,
+      "title": "Mystery Man Doodle",
+      "price": 8,
+      "buyerId": 2,
+      "buyerUsername": "pixel_pete",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:11:32.345Z",
+    "event": "Doodle Purchased",
+    "data": {
+      "doodleId": 5,
+      "title": "Mystery Man Doodle",
+      "price": 8,
+      "buyerId": 2,
+      "buyerUsername": "pixel_pete",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:12:28.554Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 49
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:12:28.560Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 50
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:12:40.479Z",
+    "event": "Doodle Liked",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "likes": 9
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:14:44.265Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 51
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:14:44.274Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 52
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:15:47.877Z",
+    "event": "Doodle Liked",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "likes": 10
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:20:35.998Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 3,
+      "title": "Abstract Doodle",
+      "views": 301
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:20:36.002Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 3,
+      "title": "Abstract Doodle",
+      "views": 302
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:21:35.724Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 3,
+      "title": "Abstract Doodle",
+      "views": 303
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:21:35.733Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 3,
+      "title": "Abstract Doodle",
+      "views": 304
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:22:14.443Z",
+    "event": "Doodle Purchased",
+    "data": {
+      "doodleId": 3,
+      "title": "Abstract Doodle",
+      "price": 10,
+      "buyerId": 2,
+      "buyerUsername": "pixel_pete",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:33:55.964Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 62
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:33:55.967Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 63
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:34:10.182Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 64
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:34:10.185Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 65
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:40:03.250Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 66
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:40:03.256Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 67
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:40:05.238Z",
+    "event": "Doodle Liked",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "likes": 13
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:40:18.675Z",
+    "event": "Doodle Purchased",
+    "data": {
+      "doodleId": 5,
+      "title": "Mystery Man Doodle",
+      "price": 8,
+      "buyerId": 2,
+      "buyerUsername": "pixel_pete",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:44:46.040Z",
+    "event": "Doodle Purchased",
+    "data": {
+      "doodleId": 5,
+      "title": "Mystery Man Doodle",
+      "price": 8,
+      "buyerId": 2,
+      "buyerUsername": "pixel_pete",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:50:05.617Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 68
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:50:05.624Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 69
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:50:06.193Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 70
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:50:06.197Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 71
+    }
+  },
+  {
+    "timestamp": "2026-04-28T21:50:13.822Z",
+    "event": "Doodle Purchased",
+    "data": {
+      "doodleId": 5,
+      "title": "Mystery Man Doodle",
+      "price": 8,
+      "buyerId": 2,
+      "buyerUsername": "pixel_pete",
+      "email": "stefanbobrowski1@gmail.com"
+    }
   }
 ]

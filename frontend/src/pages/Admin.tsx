@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Button from '../components/Button';
 
 const Admin = () => {
   const { user, token, updateBalance } = useAuth();
@@ -70,25 +71,20 @@ const Admin = () => {
               Are you sure? This will wipe all user content.
             </span>
             <div className='confirm-reset-actions'>
-              <button
-                className='btn danger'
+              <Button
+                variant='danger'
                 onClick={handleReset}
                 disabled={resetLoading}
               >
                 {resetLoading ? 'Resetting…' : 'Yes, Reset Everything'}
-              </button>
-              <button
-                className='btn default'
-                onClick={() => setConfirmReset(false)}
-              >
-                Cancel
-              </button>
+              </Button>
+              <Button onClick={() => setConfirmReset(false)}>Cancel</Button>
             </div>
           </div>
         ) : (
-          <button className='btn danger' onClick={() => setConfirmReset(true)}>
+          <Button variant='danger' onClick={() => setConfirmReset(true)}>
             Reset to Seed
-          </button>
+          </Button>
         )}
       </div>
     </div>

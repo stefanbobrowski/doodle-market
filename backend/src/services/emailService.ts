@@ -23,6 +23,17 @@ export const sendPurchaseConfirmation = async ({
   price: number;
   remainingBalance: number;
 }) => {
+  console.log(`env.SMTP_HOST: ${process.env.SMTP_HOST}`);
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT) || 465,
+    secure: true,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
   await transporter.sendMail({
     from: `"Doodle Market" <onboarding@resend.dev>`,
     to,

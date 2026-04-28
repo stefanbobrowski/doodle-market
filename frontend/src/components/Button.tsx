@@ -1,7 +1,9 @@
 import type { ReactNode } from 'react';
 
 interface ButtonProps {
-  variant?: 'default' | 'special';
+  variant?: 'default' | 'special' | 'danger';
+  type?: 'button' | 'submit' | 'reset';
+  className?: string;
   disabled?: boolean;
   children: ReactNode;
   onClick?: () => void;
@@ -10,11 +12,18 @@ interface ButtonProps {
 const Button = ({
   variant = 'default',
   children,
+  className = '',
   onClick,
   disabled = false,
+  type = 'button',
 }: ButtonProps) => {
   return (
-    <button className={`btn ${variant}`} onClick={onClick} disabled={disabled}>
+    <button
+      className={`btn ${variant} ${className}`}
+      onClick={onClick}
+      disabled={disabled}
+      type={type}
+    >
       {children}
     </button>
   );

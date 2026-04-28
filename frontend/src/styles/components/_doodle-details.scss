@@ -1,4 +1,6 @@
 .doodle-details {
+  position: relative;
+  width: fit-content;
   max-width: 640px;
 
   .doodle-image {
@@ -17,6 +19,7 @@
   .doodle-stats {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 16px;
     margin-bottom: 16px;
   }
@@ -48,9 +51,18 @@
 }
 
 .confirm-delete {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  padding: 24px;
+  margin: auto;
+  background-color: var(--surface-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-color);
 }
 
 .edit-form {
@@ -91,10 +103,6 @@
 .purchase-actions {
   display: flex;
   gap: 12px;
-
-  .btn {
-    margin-bottom: 0;
-  }
 }
 
 .purchase-success {
@@ -107,19 +115,6 @@
   }
 
   .btn {
-    align-self: flex-start;
-    margin-bottom: 0;
-  }
-}
-
-.btn-danger {
-  min-width: unset;
-  margin-bottom: 0;
-  border: 1px solid var(--error-color);
-  color: var(--error-color);
-
-  &:hover {
-    background-color: var(--error-color);
-    color: var(--text-color);
+    align-self: center;
   }
 }

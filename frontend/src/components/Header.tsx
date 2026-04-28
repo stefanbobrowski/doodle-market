@@ -1,5 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Button from './Button';
 
 export const Header = () => {
   const { user, logout } = useAuth();
@@ -58,16 +59,12 @@ export const Header = () => {
               )}
             </span>
             <span className='header-balance'>${user.balance.toFixed(2)}</span>
-            <button className='btn default header-btn' onClick={handleLogout}>
-              Logout
-            </button>
+            <Button onClick={handleLogout}>Logout</Button>
           </>
         ) : (
           <NavLink
             to='/login'
-            className={({ isActive }) =>
-              `btn default header-btn${isActive ? ' active' : ''}`
-            }
+            className={({ isActive }) => `btn ${isActive ? ' active' : ''}`}
           >
             Login
           </NavLink>

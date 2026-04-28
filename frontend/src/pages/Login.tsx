@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Button from '../components/Button';
 
 const DEMO_ACCOUNTS = [
   {
@@ -49,9 +50,8 @@ const Login = () => {
         <h3>Demo Accounts</h3>
         <div className='demo-accounts-list'>
           {DEMO_ACCOUNTS.map((a) => (
-            <button
+            <Button
               key={a.username}
-              type='button'
               className='demo-account-btn'
               onClick={() => fillAccount(a.username, a.password)}
             >
@@ -59,7 +59,7 @@ const Login = () => {
               <span className='demo-role muted'>{a.role}</span>
               <span className='demo-balance'>{a.balance}</span>
               <span className='demo-password muted'>pw: {a.password}</span>
-            </button>
+            </Button>
           ))}
         </div>
       </div>

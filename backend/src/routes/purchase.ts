@@ -42,7 +42,7 @@ router.post('/:id/purchase', authenticate, async (req: AuthRequest, res) => {
     email,
   });
 
-  // Fire-and-forget — don't fail the purchase if email errors
+  // Don't fail the purchase if email errors
   sendPurchaseConfirmation({
     to: email,
     buyerUsername: req.user!.username,

@@ -207,20 +207,10 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
             </pre>
           )}
           <div className='edit-actions'>
-            <button
-              type='submit'
-              className='btn default'
-              disabled={editLoading}
-            >
+            <Button type='submit' disabled={editLoading}>
               {editLoading ? 'Saving…' : 'Save Changes'}
-            </button>
-            <button
-              type='button'
-              className='btn default'
-              onClick={() => setEditing(false)}
-            >
-              Cancel
-            </button>
+            </Button>
+            <Button onClick={() => setEditing(false)}>Cancel</Button>
           </div>
         </form>
       ) : (
@@ -229,36 +219,31 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
             <h1>{doodle.title}</h1>
             {isOwner && (
               <div className='owner-actions'>
-                <button
-                  className='btn default'
-                  onClick={() => setEditing(true)}
-                >
-                  Edit
-                </button>
+                <Button onClick={() => setEditing(true)}>Edit</Button>
+                <Button variant='danger' onClick={() => setConfirmDelete(true)}>
+                  Delete
+                </Button>
                 {confirmDelete ? (
                   <div className='confirm-delete'>
-                    <span className='muted'>Are you sure?</span>
-                    <button
-                      className='btn danger'
-                      onClick={handleDelete}
-                      disabled={deleteLoading}
-                    >
-                      {deleteLoading ? 'Deleting…' : 'Yes, Delete'}
-                    </button>
-                    <button
-                      className='btn default'
-                      onClick={() => setConfirmDelete(false)}
-                    >
-                      Cancel
-                    </button>
+                    <h4>Delete this Doodle?</h4>
+                    <div className='flex'>
+                      <Button
+                        variant='danger'
+                        onClick={handleDelete}
+                        disabled={deleteLoading}
+                      >
+                        {deleteLoading ? 'Deleting…' : 'Yes, Delete'}
+                      </Button>
+                      <Button
+                        variant='default'
+                        onClick={() => setConfirmDelete(false)}
+                      >
+                        Cancel
+                      </Button>
+                    </div>
                   </div>
                 ) : (
-                  <button
-                    className='btn danger'
-                    onClick={() => setConfirmDelete(true)}
-                  >
-                    Delete
-                  </button>
+                  <></>
                 )}
               </div>
             )}
@@ -273,20 +258,20 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
           <div className='doodle-image'>
             <img src={doodle.imagePath} alt={doodle.title} />
           </div>
-          <p className='doodle-description'>{doodle.description}</p>
           <div className='doodle-stats'>
             <span>{doodle.views} views</span>
             <Divider orientation='vertical' />
             <span>{likes} likes</span>
+            <Divider orientation='vertical' />
+            <Button
+              onClick={handleLike}
+              disabled={liked}
+              aria-label='Like this doodle'
+            >
+              👍 {liked ? 'Liked' : 'Like'}
+            </Button>
           </div>
-
-          <Button
-            onClick={handleLike}
-            disabled={liked}
-            aria-label='Like this doodle'
-          >
-            👍 {liked ? 'Liked' : 'Like'}
-          </Button>
+          <p className='doodle-description'>{doodle.description}</p>
 
           <p className='doodle-price'>Price: ${doodle.price.toFixed(2)}</p>
 
@@ -298,8 +283,7 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
                     🎉 Purchase complete! A confirmation has been sent to{' '}
                     <strong>{purchaseEmail}</strong>.
                   </p>
-                  <button
-                    className='btn default'
+                  <Button
                     onClick={() => {
                       setPurchasing(false);
                       setPurchaseSuccess(false);
@@ -307,7 +291,7 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
                     }}
                   >
                     Done
-                  </button>
+                  </Button>
                 </div>
               ) : (
                 <form className='purchase-form' onSubmit={handlePurchase}>
@@ -353,23 +337,21 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
                         </pre>
                       )}
                       <div className='purchase-actions'>
-                        <button
+                        <Button
                           type='submit'
-                          className='btn special'
+                          variant='special'
                           disabled={purchaseLoading}
                         >
                           {purchaseLoading ? 'Processing…' : 'Confirm Purchase'}
-                        </button>
-                        <button
-                          type='button'
-                          className='btn default'
+                        </Button>
+                        <Button
                           onClick={() => {
                             setPurchasing(false);
                             setPurchaseError(null);
                           }}
                         >
                           Cancel
-                        </button>
+                        </Button>
                       </div>
                     </>
                   )}

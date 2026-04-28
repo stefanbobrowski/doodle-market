@@ -1,10 +1,9 @@
 .btn {
-  min-width: 124px;
-  margin-bottom: 16px;
   padding: 8px 16px;
   border-radius: 8px;
   font-weight: 600;
   color: var(--text-color);
+  text-decoration: none;
   background-color: transparent;
   transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -27,6 +26,7 @@
     border: none;
     overflow: visible;
     outline-style: none;
+    z-index: 0;
 
     &::before {
       content: '';
@@ -57,6 +57,18 @@
 
     &:hover::before {
       filter: brightness(130%);
+    }
+  }
+
+  &.danger {
+    min-width: unset;
+    margin-bottom: 0;
+    border: 1px solid var(--error-color);
+    color: var(--error-color);
+
+    &:hover {
+      background-color: var(--error-color);
+      color: var(--text-color);
     }
   }
 }

@@ -61,6 +61,7 @@ export default function StyleGuide() {
         <div className='flex'>
           <Button variant='default'>Default Button</Button>
           <Button variant='special'>Special Button</Button>
+          <Button variant='danger'>Danger Button</Button>
         </div>
       </section>
     </div>

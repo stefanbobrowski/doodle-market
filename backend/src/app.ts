@@ -1,5 +1,5 @@
 import express from 'express';
-import './services/userStore.js'; // ensure users table is created before doodles
+import './services/userStore.js';
 import routes from './routes/index.js';
 
 const app = express();

@@ -17,7 +17,7 @@ const requireAdmin = (
   next();
 };
 
-// POST /admin/reset — full seed reset
+// POST /admin/reset - full seed reset
 router.post('/reset', authenticate, requireAdmin, (req: AuthRequest, res) => {
   try {
     resetToSeed();
@@ -38,7 +38,7 @@ router.post('/reset', authenticate, requireAdmin, (req: AuthRequest, res) => {
   }
 });
 
-// POST /admin/reset-balance/:userId — reset one user's balance
+// POST /admin/reset-balance/:userId - reset one user's balance
 router.post(
   '/reset-balance/:userId',
   authenticate,
