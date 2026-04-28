@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Button from './Button';
 import Divider from './Divider';
 import type { Doodle } from '../types/doodle';
@@ -10,7 +10,7 @@ interface DoodleDetailsProps {
 }
 
 const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
-  const { user, token } = useAuth();
+  const { user, token, updateBalance } = useAuth();
   const navigate = useNavigate();
   const isOwner = user && (user.id === doodle.userId || user.role === 'admin');
 
@@ -32,6 +32,13 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
   const [deleteLoading, setDeleteLoading] = useState(false);
   const [deleteError, setDeleteError] = useState<string | null>(null);
   const [confirmDelete, setConfirmDelete] = useState(false);
+
+  // Purchase state
+  const [purchasing, setPurchasing] = useState(false);
+  const [purchaseEmail, setPurchaseEmail] = useState('');
+  const [purchaseError, setPurchaseError] = useState<string | null>(null);
+  const [purchaseLoading, setPurchaseLoading] = useState(false);
+  const [purchaseSuccess, setPurchaseSuccess] = useState(false);
 
   const handleLike = async () => {
     if (liked) return;
@@ -101,6 +108,30 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
     } catch (err) {
       setDeleteError(err instanceof Error ? err.message : 'Delete failed');
       setDeleteLoading(false);
+    }
+  };
+
+  const handlePurchase = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setPurchaseError(null);
+    setPurchaseLoading(true);
+    try {
+      const res = await fetch(`/api/doodles/${doodle.id}/purchase`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ email: purchaseEmail }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Purchase failed');
+      updateBalance(data.user.balance);
+      setPurchaseSuccess(true);
+    } catch (err) {
+      setPurchaseError(err instanceof Error ? err.message : 'Purchase failed');
+    } finally {
+      setPurchaseLoading(false);
     }
   };
 
@@ -259,9 +290,99 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
 
           <p className='doodle-price'>Price: ${doodle.price.toFixed(2)}</p>
 
-          <Button variant='special' onClick={() => alert('Buy now!')}>
-            Buy Now
-          </Button>
+          {purchasing ? (
+            <div className='purchase-modal'>
+              {purchaseSuccess ? (
+                <div className='purchase-success'>
+                  <p>
+                    🎉 Purchase complete! A confirmation has been sent to{' '}
+                    <strong>{purchaseEmail}</strong>.
+                  </p>
+                  <button
+                    className='btn default'
+                    onClick={() => {
+                      setPurchasing(false);
+                      setPurchaseSuccess(false);
+                      setPurchaseEmail('');
+                    }}
+                  >
+                    Done
+                  </button>
+                </div>
+              ) : (
+                <form className='purchase-form' onSubmit={handlePurchase}>
+                  <h3>Complete Purchase</h3>
+                  <p className='muted'>
+                    <strong style={{ color: 'var(--price-color)' }}>
+                      ${doodle.price.toFixed(2)}
+                    </strong>{' '}
+                    will be deducted from your balance.
+                    {user && (
+                      <>
+                        {' '}
+                        Your current balance:{' '}
+                        <span style={{ color: 'var(--price-color)' }}>
+                          ${user.balance.toFixed(2)}
+                        </span>
+                      </>
+                    )}
+                  </p>
+                  {!user && (
+                    <p className='muted'>
+                      <Link to='/login'>Sign in</Link> to purchase this doodle.
+                    </p>
+                  )}
+                  {user && (
+                    <>
+                      <div className='form-field'>
+                        <label htmlFor='purchase-email'>
+                          Email for receipt
+                        </label>
+                        <input
+                          id='purchase-email'
+                          type='email'
+                          value={purchaseEmail}
+                          onChange={(e) => setPurchaseEmail(e.target.value)}
+                          placeholder='you@example.com'
+                          required
+                        />
+                      </div>
+                      {purchaseError && (
+                        <pre>
+                          <code className='error'>{purchaseError}</code>
+                        </pre>
+                      )}
+                      <div className='purchase-actions'>
+                        <button
+                          type='submit'
+                          className='btn special'
+                          disabled={purchaseLoading}
+                        >
+                          {purchaseLoading ? 'Processing…' : 'Confirm Purchase'}
+                        </button>
+                        <button
+                          type='button'
+                          className='btn default'
+                          onClick={() => {
+                            setPurchasing(false);
+                            setPurchaseError(null);
+                          }}
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </form>
+              )}
+            </div>
+          ) : (
+            !isOwner && (
+              <Button variant='special' onClick={() => setPurchasing(true)}>
+                Buy Now
+              </Button>
+            )
+          )}
         </>
       )}
     </div>

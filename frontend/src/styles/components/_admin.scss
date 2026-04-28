@@ -1,0 +1,35 @@
+.admin-page {
+  max-width: 560px;
+}
+
+.admin-section {
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--surface-color);
+  margin-top: 24px;
+
+  h2 {
+    margin-bottom: 8px;
+  }
+}
+
+.admin-success {
+  color: var(--price-color);
+  margin-bottom: 0;
+}
+
+.confirm-reset {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.confirm-reset-actions {
+  display: flex;
+  gap: 12px;
+
+  .btn {
+    margin-bottom: 0;
+  }
+}

@@ -12,6 +12,7 @@ interface AuthContextType {
   token: string | null;
   login: (username: string, password: string) => Promise<void>;
   logout: () => void;
+  updateBalance: (newBalance: number) => void;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -53,8 +54,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setUser(null);
   };
 
+  const updateBalance = (newBalance: number) => {
+    setUser((prev) => {
+      if (!prev) return prev;
+      const updated = { ...prev, balance: newBalance };
+      localStorage.setItem('user', JSON.stringify(updated));
+      return updated;
+    });
+  };
+
   return (
-    <AuthContext.Provider value={{ user, token, login, logout }}>
+    <AuthContext.Provider value={{ user, token, login, logout, updateBalance }}>
       {children}
     </AuthContext.Provider>
   );

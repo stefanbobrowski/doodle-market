@@ -2,6 +2,8 @@ import express from 'express';
 import doodlesRouter from './doodles.js';
 import interactionsRouter from './interactions.js';
 import authRouter from './auth.js';
+import purchaseRouter from './purchase.js';
+import adminRouter from './admin.js';
 
 const router = express.Router();
 
@@ -17,9 +19,12 @@ router.post('/', (req, res) => {
 // Auth routes
 router.use('/auth', authRouter);
 
+// Admin routes
+router.use('/admin', adminRouter);
+
 // Doodle routes
 router.use('/doodles', doodlesRouter);
-
 router.use('/doodles', interactionsRouter);
+router.use('/doodles', purchaseRouter);
 
 export default router;

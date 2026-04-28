@@ -19,7 +19,7 @@ const seedUsers = () => {
   if (count > 0) return;
 
   const users = [
-    { username: 'admin', password: 'admin123', role: 'admin', balance: 1000 },
+    { username: 'admin', password: 'admin789', role: 'admin', balance: 1000 },
     { username: 'pixel_pete', password: 'pete123', role: 'user', balance: 100 },
     { username: 'sketch_sam', password: 'sam123', role: 'user', balance: 100 },
   ];
@@ -50,3 +50,28 @@ export const getUserById = (id: number): PublicUser | undefined =>
   db
     .prepare('SELECT id, username, role, balance FROM users WHERE id = ?')
     .get(id) as PublicUser | undefined;
+
+export const deductBalance = (
+  userId: number,
+  amount: number
+): PublicUser | null => {
+  const user = getUserById(userId);
+  if (!user) return null;
+  if (user.balance < amount) return null;
+  db.prepare('UPDATE users SET balance = balance - ? WHERE id = ?').run(
+    amount,
+    userId
+  );
+  return getUserById(userId)!;
+};
+
+export const resetBalance = (
+  userId: number,
+  amount = 100
+): PublicUser | null => {
+  const result = db
+    .prepare('UPDATE users SET balance = ? WHERE id = ?')
+    .run(amount, userId);
+  if (result.changes === 0) return null;
+  return getUserById(userId)!;
+};

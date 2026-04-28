@@ -39,6 +39,14 @@ export const Header = () => {
             Upload
           </NavLink>
         )}
+        {user?.role === 'admin' && (
+          <NavLink
+            to='/admin'
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Admin
+          </NavLink>
+        )}
       </nav>
       <div className='header-auth'>
         {user ? (

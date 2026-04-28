@@ -1063,5 +1063,59 @@
       "title": "Funny Cat Doodle",
       "views": 156
     }
+  },
+  {
+    "timestamp": "2026-04-28T04:36:43.621Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 201
+    }
+  },
+  {
+    "timestamp": "2026-04-28T04:36:43.624Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 202
+    }
+  },
+  {
+    "timestamp": "2026-04-28T04:39:24.918Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 43
+    }
+  },
+  {
+    "timestamp": "2026-04-28T04:39:24.923Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 44
+    }
+  },
+  {
+    "timestamp": "2026-04-28T04:39:36.322Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 45
+    }
+  },
+  {
+    "timestamp": "2026-04-28T04:39:36.326Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 46
+    }
   }
 ]

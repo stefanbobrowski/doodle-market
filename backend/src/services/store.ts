@@ -135,3 +135,38 @@ export const incrementLikes = (id: number): Doodle | null => {
   });
   return doodle;
 };
+
+export const resetToSeed = (): void => {
+  const seedPath = path.join(process.cwd(), 'data/seed.json');
+  const seed: Doodle[] = JSON.parse(fs.readFileSync(seedPath, 'utf-8'));
+  const seedIds = new Set(seed.map((d) => d.id));
+  const seedImagePaths = new Set(seed.map((d) => d.imagePath));
+
+  // Delete uploaded image files for non-seed doodles
+  const allDoodles = getAllDoodles();
+  for (const doodle of allDoodles) {
+    if (!seedIds.has(doodle.id) || !seedImagePaths.has(doodle.imagePath)) {
+      if (doodle.imagePath && !seedImagePaths.has(doodle.imagePath)) {
+        const filePath = path.join(process.cwd(), doodle.imagePath);
+        try {
+          fs.unlinkSync(filePath);
+        } catch {
+          /* already gone */
+        }
+      }
+    }
+  }
+
+  // Reset doodles table to seed state
+  const reset = db.transaction(() => {
+    db.prepare('DELETE FROM doodles').run();
+    db.prepare("DELETE FROM sqlite_sequence WHERE name = 'doodles'").run();
+    const insert = db.prepare(
+      'INSERT INTO doodles (id, title, description, price, imagePath, views, likes, userId) VALUES (@id, @title, @description, @price, @imagePath, @views, @likes, @userId)'
+    );
+    for (const doodle of seed) insert.run(doodle);
+  });
+  reset();
+
+  logEvent('Admin Reset', { action: 'reset to seed' });
+};

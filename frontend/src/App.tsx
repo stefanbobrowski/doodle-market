@@ -7,6 +7,7 @@ import DoodleDetail from './pages/DoodleDetail';
 import About from './pages/About';
 import Login from './pages/Login';
 import Upload from './pages/Upload';
+import Admin from './pages/Admin';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='about' element={<About />} />
           <Route path='login' element={<Login />} />
           <Route path='upload' element={<Upload />} />
+          <Route path='admin' element={<Admin />} />
         </Route>
       </Routes>
     </AuthProvider>

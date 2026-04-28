@@ -28,5 +28,25 @@
     "views": 300,
     "likes": 60,
     "userId": 1
+  },
+  {
+    "id": 4,
+    "title": "Computer Doodle",
+    "description": "A charming doodle of a retro computer. pixel_pete's signature piece.",
+    "price": 6.5,
+    "imagePath": "/uploads/computer-doodle.png",
+    "views": 42,
+    "likes": 8,
+    "userId": 2
+  },
+  {
+    "id": 5,
+    "title": "Mystery Man Doodle",
+    "description": "A mysterious figure captured in sketch_sam's unmistakable style.",
+    "price": 8.0,
+    "imagePath": "/uploads/mystery-man-doodle.png",
+    "views": 57,
+    "likes": 12,
+    "userId": 3
   }
 ]

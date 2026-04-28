@@ -69,7 +69,50 @@
   }
 }
 
-.btn.danger {
+.purchase-modal {
+  margin-top: 8px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--surface-color);
+  max-width: 420px;
+}
+
+.purchase-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.purchase-actions {
+  display: flex;
+  gap: 12px;
+
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
+.purchase-success {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .btn {
+    align-self: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.btn-danger {
   min-width: unset;
   margin-bottom: 0;
   border: 1px solid var(--error-color);
