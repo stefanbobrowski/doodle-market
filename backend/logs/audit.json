@@ -1504,5 +1504,80 @@
       "buyerUsername": "pixel_pete",
       "email": "stefanbobrowski1@gmail.com"
     }
+  },
+  {
+    "timestamp": "2026-04-30T17:07:02.804Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 72
+    }
+  },
+  {
+    "timestamp": "2026-04-30T17:07:02.809Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 73
+    }
+  },
+  {
+    "timestamp": "2026-04-30T17:07:06.103Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 74
+    }
+  },
+  {
+    "timestamp": "2026-04-30T17:07:06.110Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 75
+    }
+  },
+  {
+    "timestamp": "2026-04-30T17:07:10.138Z",
+    "event": "Doodle Liked",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "likes": 14
+    }
+  },
+  {
+    "timestamp": "2026-04-30T17:07:33.933Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 53
+    }
+  },
+  {
+    "timestamp": "2026-04-30T17:07:33.936Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 54
+    }
+  },
+  {
+    "timestamp": "2026-04-30T17:07:39.987Z",
+    "event": "Doodle Purchased",
+    "data": {
+      "doodleId": 4,
+      "title": "Computer Doodle",
+      "price": 6.5,
+      "buyerId": 3,
+      "buyerUsername": "sketch_sam",
+      "email": "stefanbobrowski1@gmail.com"
+    }
   }
 ]

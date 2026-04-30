@@ -1,14 +1,4 @@
-import nodemailer from 'nodemailer';
-
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT) || 465,
-  secure: true,
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
+import { Resend } from 'resend';
 
 export const sendPurchaseConfirmation = async ({
   to,
@@ -23,19 +13,10 @@ export const sendPurchaseConfirmation = async ({
   price: number;
   remainingBalance: number;
 }) => {
-  console.log(`env.SMTP_HOST: ${process.env.SMTP_HOST}`);
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 465,
-    secure: true,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
-  await transporter.sendMail({
-    from: `"Doodle Market" <onboarding@resend.dev>`,
+  const { error } = await resend.emails.send({
+    from: 'Doodle Market <onboarding@resend.dev>',
     to,
     subject: `Your Doodle Market receipt — ${doodleTitle}`,
     html: `
@@ -62,4 +43,6 @@ export const sendPurchaseConfirmation = async ({
       </div>
     `,
   });
+
+  if (error) throw new Error(error.message);
 };
