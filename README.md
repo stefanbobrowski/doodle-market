@@ -11,34 +11,61 @@
       """) )"""
 ```
 
-A full-stack Vite, React, TypeScript, Express app for uploading, selling, rating, and downloading doodles. Demonstrates backend concepts like authentication, orchestration, aggregation, business logic, media file handling, audit logging, and rate limiting.
+A full-stack Vite, React, TypeScript, Express app for uploading, selling, and rating doodles. Demonstrates backend concepts like JWT authentication, ownership-based authorization, purchase flow, transactional emails, audit logging, rate limiting, integration testing, and admin tooling.
 
 ## Features
 
-- **Upload Doodles**: Users can upload images with titles, descriptions, and prices.
-- **Browse & View**: Gallery of doodles with view/like counters.
-- **Rate & Interact**: Like doodles and track engagement.
-- **Audit Logging**: All actions (uploads, updates, likes) are logged for review.
-- **Rate Limiting**: Prevents spam uploads with configurable limits.
-- **Image Processing**: Automatic resizing and compression for consistent quality.
-- **Persistent Data**: Fast synchronous data storage with better-sqlite3
-- **Users + Auth**: Simple account login with demo users and Auth context.
-- **Purchase Flow with Email confirmation** - Demo account balance with purchase confirmation email.
-- **Multi-layer Moderdation**: Text and Image content moderation with Google Cloud Vision and Perspective API.
-  **Google Cloud Platform integration**: Deployed and Hosted on GCP.
+- **Browse & View**: Gallery of doodles with view and like counters.
+- **Upload Doodles**: Authenticated users can upload images with titles, descriptions, and prices. 5MB limit, images only, rate-limited to 5 uploads per hour.
+- **Edit & Delete**: Owners (and admins) can edit doodle details or replace the image, and delete with a two-step confirmation.
+- **Ownership Badges**: Doodle cards show an owner badge for your own doodles. Edit/Delete controls are only shown to the owner or admin.
+- **Purchase Flow**: Buy doodles using a demo account balance. Blocks self-purchase and enforces sufficient funds.
+- **Transactional Email**: Purchase confirmation email sent via the Resend API with an itemized receipt.
+- **JWT Auth**: Login returns a signed JWT (24h expiry) stored in localStorage and sent as a Bearer token on authenticated requests.
+- **Demo Accounts**: Two preset user accounts (`pixel_pete`, `sketch_sam`) with quick-fill buttons on the login page. Admin account is intentionally not shown on the login UI.
+- **Admin Dashboard**: Admin-only page to reset the entire app to seed state and wipe user-uploaded doodles, restores 5 seed doodles, and resets all account balances.
+- **Audit Logging**: Purchases and key events are appended to `logs/audit.json` with timestamps.
+- **Rate Limiting**: Upload endpoint is rate-limited per IP (5/hour) via `express-rate-limit`.
+- **Persistent Storage**: Synchronous SQLite via `better-sqlite3`. DB auto-creates and seeds on first run.
+- **Endpoint Testing**: Backend API tests with Vitest and Supertest, running against an in-memory SQLite database to keep tests isolated from real data.
 
 ## Tech Stack
 
-- **Frontend**: Vite, React, TypeScript
-- **Backend**: Express.js, TypeScript
-- **Database**: better-sqlite3
+- **Frontend**: Vite, React, TypeScript, SCSS
+- **Backend**: Express.js, TypeScript, ESM (`tsx` in dev)
+- **Database**: better-sqlite3 (SQLite)
+- **Auth**: jsonwebtoken, bcryptjs
+- **Email**: Resend API (`resend` SDK)
+- **File Uploads**: multer
+- **Rate Limiting**: express-rate-limit
+- **Testing**: Vitest, Supertest
+
+## Demo Accounts
+
+| Username     | Password                    | Role  | Starting Balance |
+| ------------ | --------------------------- | ----- | ---------------- |
+| `pixel_pete` | `pete123`                   | user  | $100.00          |
+| `sketch_sam` | `sam123`                    | user  | $100.00          |
+| `admin`      | _(not shown on login page)_ | admin | $1000.00         |
 
 ## API Endpoints
 
-- `GET /doodles` - Get all doodles
-- `GET /doodles/:id` - Get a single doodle
-- `POST /doodles` - Upload a new doodle
-- `PATCH /doodles/:id` - Update a doodle
-- `DELETE /doodles/:id` - Delete a doodle
-- `POST /doodles/:id/view` - Increment views
-- `POST /doodles/:id/like` - Increment likes
+### Auth
+
+- `POST /auth/login` — Login, returns JWT + user object
+
+### Doodles
+
+- `GET /doodles` — Get all doodles
+- `GET /doodles/:id` — Get a single doodle
+- `POST /doodles` — Upload a new doodle _(auth required)_
+- `PATCH /doodles/:id` — Update title, description, price, or image _(owner or admin)_
+- `DELETE /doodles/:id` — Delete a doodle and its image file _(owner or admin)_
+- `POST /doodles/:id/view` — Increment view count
+- `POST /doodles/:id/like` — Increment like count
+- `POST /doodles/:id/purchase` — Purchase a doodle, deducts balance, sends email receipt _(auth required)_
+
+### Admin
+
+- `POST /admin/reset` — Reset all doodles to seed + restore all balances _(admin only)_
+- `POST /admin/reset-balance/:userId` — Reset a single user's balance _(admin only)_
