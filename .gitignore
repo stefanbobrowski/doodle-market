@@ -45,3 +45,6 @@ features.txt
 
 # Database
 backend/data/*.db
+
+# Uploads
+backend/uploads/
