@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://YOUR_CLOUD_RUN_URL/</loc>
+    <loc>https://doodle-market-212973711449.us-central1.run.app/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://YOUR_CLOUD_RUN_URL/about</loc>
+    <loc>https://doodle-market-212973711449.us-central1.run.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
    <url>
-    <loc>https://YOUR_CLOUD_RUN_URL/style-guide</loc>
+    <loc>https://doodle-market-212973711449.us-central1.run.app/style-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://YOUR_CLOUD_RUN_URL/login</loc>
+    <loc>https://doodle-market-212973711449.us-central1.run.app/login</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

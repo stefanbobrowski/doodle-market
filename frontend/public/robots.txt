@@ -5,4 +5,4 @@ Disallow: /upload
 
 Allow: /
 
-Sitemap: https://YOUR_CLOUD_RUN_URL/sitemap.xml
+Sitemap: https://doodle-market-212973711449.us-central1.run.app/sitemap.xml
