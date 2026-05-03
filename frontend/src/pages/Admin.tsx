@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useAuditLog } from '../context/AuditLogContext';
 import Button from '../components/Button';
 
 const Admin = () => {
   const { user, token, updateBalance } = useAuth();
+  const { refreshAuditLog } = useAuditLog();
   const navigate = useNavigate();
 
   const [resetLoading, setResetLoading] = useState(false);
@@ -31,6 +33,7 @@ const Admin = () => {
       updateBalance(1000);
       setResetSuccess(true);
       setConfirmReset(false);
+      refreshAuditLog();
     } catch (err) {
       setResetError(err instanceof Error ? err.message : 'Reset failed');
     } finally {

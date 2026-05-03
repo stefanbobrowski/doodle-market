@@ -1,0 +1,130 @@
+.audit-log-container {
+  position: fixed;
+  right: 17px;
+  top: 83px;
+  height: 100vh;
+  background-color: var(--surface-color);
+  border-left: 1px solid var(--code-color);
+  transition: width 0.3s ease;
+  z-index: 50;
+
+  &.closed {
+    width: 40px;
+  }
+
+  &.open {
+    width: 350px;
+  }
+
+  .audit-toggle {
+    background: none;
+    border: none;
+    color: var(--code-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 11px;
+    padding: 2px;
+
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+
+  .audit-log-content {
+    padding: 16px;
+    height: 100%;
+    overflow-y: auto;
+
+    .audit-log-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-family: monospace;
+      text-transform: uppercase;
+      color: var(--code-color);
+      letter-spacing: 2px;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .audit-refresh {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--code-color);
+      line-height: 1;
+      padding: 0px 4px;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .log-entries {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .log-entry {
+        padding: 12px;
+        border-left: 3px solid var(--code-color);
+        background-color: rgba(2, 221, 79, 0.05);
+        border-bottom: 1px dashed var(--border-color);
+
+        &.event-purchase {
+          border-left-color: var(--price-color);
+          background-color: rgba(103, 232, 103, 0.08);
+        }
+        &.event-added {
+          border-left-color: var(--link-color);
+          background-color: rgba(179, 154, 255, 0.08);
+        }
+        &.event-deleted {
+          border-left-color: var(--error-color);
+          background-color: rgba(215, 58, 73, 0.08);
+        }
+        &.event-updated {
+          border-left-color: #f0a500;
+          background-color: rgba(240, 165, 0, 0.06);
+        }
+        &.event-liked {
+          border-left-color: #ff6b9d;
+          background-color: rgba(255, 107, 157, 0.06);
+        }
+
+        p {
+          font-size: 0.65rem;
+          color: var(--text-muted-color);
+          margin: 0 0 4px 0;
+          font-family: monospace;
+        }
+
+        .log-username {
+          font-size: 0.75rem;
+          color: var(--code-color);
+          font-family: monospace;
+        }
+
+        .log-event {
+          font-size: 0.75rem;
+          color: var(--text-color);
+          font-family: monospace;
+          //   font-weight: bold;
+        }
+
+        .log-title {
+          font-size: 0.75rem;
+          color: var(--text-muted-color);
+          font-family: monospace;
+        }
+      }
+    }
+  }
+}

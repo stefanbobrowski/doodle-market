@@ -1597,5 +1597,1305 @@
       "title": "Mystery Man Doodle",
       "views": 77
     }
+  },
+  {
+    "timestamp": "2026-05-03T00:04:24.062Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 78
+    }
+  },
+  {
+    "timestamp": "2026-05-03T00:04:24.066Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 79
+    }
+  },
+  {
+    "timestamp": "2026-05-03T15:48:08.664Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 151
+    }
+  },
+  {
+    "timestamp": "2026-05-03T15:48:08.669Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 152
+    }
+  },
+  {
+    "timestamp": "2026-05-03T15:48:14.095Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 211
+    }
+  },
+  {
+    "timestamp": "2026-05-03T15:48:14.098Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 212
+    }
+  },
+  {
+    "timestamp": "2026-05-03T15:51:07.057Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 153
+    }
+  },
+  {
+    "timestamp": "2026-05-03T15:51:10.768Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 3,
+      "title": "Abstract Doodle",
+      "views": 305
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:11:24.322Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 154
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:11:24.325Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 155
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:13:52.369Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 213
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:13:52.373Z",
+    "event": "Doodle Viewed",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 214
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:14:00.031Z",
+    "event": "Doodle Purchased",
+    "data": {
+      "doodleId": 2,
+      "title": "Sun Doodle",
+      "price": 7.5,
+      "buyerId": 2,
+      "buyerUsername": "pixel_pete",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:24:43.619Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 215
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:24:43.629Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 216
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:24:51.651Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 156
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:24:51.653Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 157
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:25:09.714Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 80
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:25:09.719Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 81
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:25:29.937Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 217
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:25:29.943Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 218
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:25:58.721Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 3,
+      "title": "Abstract Doodle",
+      "views": 306
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:25:58.726Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 3,
+      "title": "Abstract Doodle",
+      "views": 307
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:26:00.711Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 3,
+      "title": "Abstract Doodle",
+      "views": 308
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:26:00.719Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 3,
+      "title": "Abstract Doodle",
+      "views": 309
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:26:19.765Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 82
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:26:19.768Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 83
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:26:22.831Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 84
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:26:22.840Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 85
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:01.378Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 86
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:01.386Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 87
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:17.586Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 55
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:17.589Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 56
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:24.772Z",
+    "event": "Doodle Purchased",
+    "userId": 3,
+    "username": "sketch_sam",
+    "data": {
+      "doodleId": 4,
+      "title": "Computer Doodle",
+      "price": 6.5,
+      "buyerId": 3,
+      "buyerUsername": "sketch_sam",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:27.618Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 57
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:27.628Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 58
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:42.632Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 219
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:42.636Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 220
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:47.111Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 221
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:29:47.119Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 222
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:30:00.061Z",
+    "event": "Doodle Purchased",
+    "userId": 3,
+    "username": "sketch_sam",
+    "data": {
+      "doodleId": 2,
+      "title": "Sun Doodle",
+      "price": 7.5,
+      "buyerId": 3,
+      "buyerUsername": "sketch_sam",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:30:04.360Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 223
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:30:04.369Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 224
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:34:34.416Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 158
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:34:34.420Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 159
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:34:45.498Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 88
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:34:45.502Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 89
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:34:48.598Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 90
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:34:48.607Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 91
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:35:00.739Z",
+    "event": "Doodle Purchased",
+    "userId": 2,
+    "username": "pixel_pete",
+    "data": {
+      "doodleId": 5,
+      "title": "Mystery Man Doodle",
+      "price": 8,
+      "buyerId": 2,
+      "buyerUsername": "pixel_pete",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:35:03.572Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 92
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:35:03.587Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 93
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:35:30.704Z",
+    "event": "Doodle Purchased",
+    "userId": 2,
+    "username": "pixel_pete",
+    "data": {
+      "doodleId": 5,
+      "title": "Mystery Man Doodle",
+      "price": 8,
+      "buyerId": 2,
+      "buyerUsername": "pixel_pete",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:36:09.466Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 59
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:36:09.469Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 60
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:36:15.896Z",
+    "event": "Doodle Updated",
+    "userId": 2,
+    "username": "pixel_pete",
+    "data": {
+      "title": "Computer Doodle edit",
+      "description": "A charming doodle of a retro computer. pixel_pete's signature piece.",
+      "price": 6.5
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:36:15.986Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle edit",
+      "views": 61
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:36:15.990Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle edit",
+      "views": 62
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:36:35.613Z",
+    "event": "Doodle Deleted",
+    "userId": 2,
+    "username": "pixel_pete",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle edit",
+      "description": "A charming doodle of a retro computer. pixel_pete's signature piece.",
+      "price": 6.5,
+      "imagePath": "/uploads/computer-doodle.png",
+      "views": 62,
+      "likes": 10,
+      "userId": 2
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:37:18.152Z",
+    "event": "Admin Reset",
+    "username": "Anonymous",
+    "data": {
+      "action": "reset to seed"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:37:42.553Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 43
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:37:42.556Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 44
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:37:56.979Z",
+    "event": "Doodle Updated",
+    "userId": 1,
+    "username": "admin",
+    "data": {
+      "title": "Computer Doodle",
+      "description": "A charming doodle of a retro computer. pixel_pete's signature piece.",
+      "price": 6.5,
+      "imagePath": "/uploads/2aa60f273adf6e08d88a49d9bbacb0bc"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:37:57.074Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 45
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:37:57.079Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 46
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:38:00.327Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 47
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:38:00.336Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 48
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:10.729Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 58
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:10.732Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 59
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:13.935Z",
+    "event": "Doodle Liked",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "likes": 13
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:21.746Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 49
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:21.750Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 50
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:27.083Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 60
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:27.087Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 61
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:45.517Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 151
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:45.520Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 152
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:53.260Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 201
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:40:53.263Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 202
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:41:01.718Z",
+    "event": "Doodle Purchased",
+    "userId": 3,
+    "username": "sketch_sam",
+    "data": {
+      "doodleId": 2,
+      "title": "Sun Doodle",
+      "price": 7.5,
+      "buyerId": 3,
+      "buyerUsername": "sketch_sam",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:41:05.147Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 203
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:41:05.155Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 204
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:27.133Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 205
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:27.137Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 206
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:30.106Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 153
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:30.108Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 154
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:35.396Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 51
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:35.400Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 52
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:40.760Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 62
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:40.764Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 63
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:42.298Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 64
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:42.308Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 65
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:46.082Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 66
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:46.092Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 67
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:51.593Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 207
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:51.598Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 208
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:52.512Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 209
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:44:52.525Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 210
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:45:05.184Z",
+    "event": "Doodle Purchased",
+    "userId": 3,
+    "username": "sketch_sam",
+    "data": {
+      "doodleId": 2,
+      "title": "Sun Doodle",
+      "price": 7.5,
+      "buyerId": 3,
+      "buyerUsername": "sketch_sam",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:47:15.396Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 68
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:47:28.167Z",
+    "event": "Doodle Liked",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "likes": 14
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:47:31.979Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 53
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:47:40.017Z",
+    "event": "Doodle Purchased",
+    "userId": 3,
+    "username": "sketch_sam",
+    "data": {
+      "doodleId": 4,
+      "title": "Computer Doodle",
+      "price": 6.5,
+      "buyerId": 3,
+      "buyerUsername": "sketch_sam",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:47:46.547Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 54
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:47:53.567Z",
+    "event": "Doodle Liked",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "likes": 9
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:47:55.447Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 4,
+      "title": "Computer Doodle",
+      "views": 55
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:48:01.840Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 155
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:48:06.427Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 211
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:48:09.926Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 156
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:53:57.758Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 157
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:54:03.240Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 212
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:54:05.988Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 213
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:54:11.960Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 69
+    }
+  },
+  {
+    "timestamp": "2026-05-03T16:56:19.072Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 70
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:00:13.586Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 71
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:10:10.058Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 72
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:10:52.083Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 73
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:11:34.079Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 74
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:12:56.973Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 75
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:13:06.837Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 2,
+      "title": "Sun Doodle",
+      "views": 214
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:13:13.786Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 158
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:13:21.430Z",
+    "event": "Doodle Purchased",
+    "userId": 3,
+    "username": "sketch_sam",
+    "data": {
+      "doodleId": 1,
+      "title": "Funny Cat Doodle",
+      "price": 5.99,
+      "buyerId": 3,
+      "buyerUsername": "sketch_sam",
+      "email": "stefanbobrowski1@gmail.com"
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:20:43.340Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 76
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:22:05.862Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle",
+      "views": 77
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:23:00.721Z",
+    "event": "Doodle Updated",
+    "userId": 3,
+    "username": "sketch_sam",
+    "data": {
+      "title": "Mystery Man Doodle edit",
+      "description": "A mysterious figure captured in sketch_sam's unmistakable style.",
+      "price": 9
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:23:00.811Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 5,
+      "title": "Mystery Man Doodle edit",
+      "views": 78
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:23:11.135Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 159
+    }
+  },
+  {
+    "timestamp": "2026-05-03T17:24:38.689Z",
+    "event": "Doodle Viewed",
+    "username": "Anonymous",
+    "data": {
+      "id": 1,
+      "title": "Funny Cat Doodle",
+      "views": 160
+    }
   }
 ]

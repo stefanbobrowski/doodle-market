@@ -4,6 +4,7 @@ import Button from './Button';
 import Divider from './Divider';
 import type { Doodle } from '../types/doodle';
 import { useAuth } from '../context/AuthContext';
+import { useAuditLog } from '../context/AuditLogContext';
 
 interface DoodleDetailsProps {
   doodle: Doodle;
@@ -11,6 +12,7 @@ interface DoodleDetailsProps {
 
 const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
   const { user, token, updateBalance } = useAuth();
+  const { refreshAuditLog } = useAuditLog();
   const navigate = useNavigate();
   const isOwner = user && (user.id === doodle.userId || user.role === 'admin');
 
@@ -50,6 +52,7 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
       const data = await response.json();
       setLikes(data.likes);
       setLiked(true);
+      refreshAuditLog();
     } catch (err) {
       console.error('Failed to increment like count', err);
     }
@@ -84,6 +87,7 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
       }
 
       // Reload the page to reflect updated data
+      refreshAuditLog();
       navigate(0);
     } catch (err) {
       setEditError(err instanceof Error ? err.message : 'Update failed');
@@ -104,6 +108,7 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
         const data = await res.json();
         throw new Error(data.error || 'Delete failed');
       }
+      refreshAuditLog();
       navigate('/');
     } catch (err) {
       setDeleteError(err instanceof Error ? err.message : 'Delete failed');
@@ -128,6 +133,7 @@ const DoodleDetails = ({ doodle }: DoodleDetailsProps) => {
       if (!res.ok) throw new Error(data.error || 'Purchase failed');
       updateBalance(data.user.balance);
       setPurchaseSuccess(true);
+      refreshAuditLog();
     } catch (err) {
       setPurchaseError(err instanceof Error ? err.message : 'Purchase failed');
     } finally {

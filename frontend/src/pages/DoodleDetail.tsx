@@ -3,9 +3,11 @@ import { useParams, Link } from 'react-router-dom';
 import DoodleDetails from '../components/DoodleDetails';
 import LoadingSpinner from '../components/LoadingSpinner';
 import type { Doodle } from '../types/doodle';
+import { useAuditLog } from '../context/AuditLogContext';
 
 const DoodleDetail = () => {
   const { id } = useParams<{ id: string }>();
+  const { refreshAuditLog } = useAuditLog();
   const [doodle, setDoodle] = useState<Doodle | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -20,6 +22,8 @@ const DoodleDetail = () => {
         });
       } catch (err) {
         console.error('Failed to increment view count', err);
+      } finally {
+        refreshAuditLog();
       }
     };
 
@@ -38,7 +42,7 @@ const DoodleDetail = () => {
 
     fetchDoodle();
     incrementView();
-  }, [id]);
+  }, [id, refreshAuditLog]);
 
   if (loading) return <LoadingSpinner />;
   if (error)

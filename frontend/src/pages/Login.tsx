@@ -57,7 +57,10 @@ const Login = () => {
             >
               <span className='demo-username'>{a.username}</span>
               <span className='demo-role muted'>{a.role}</span>
-              <span className='demo-balance'>{a.balance}</span>
+              <div>
+                <span className='demo-role muted'>Starting Balance: </span>
+                <span className='demo-balance'>{a.balance}</span>
+              </div>
               <span className='demo-password muted'>pw: {a.password}</span>
             </Button>
           ))}

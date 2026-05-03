@@ -29,22 +29,24 @@ const Home = () => {
   }, [location.key]);
 
   return (
-    <div>
-      <h1>Welcome to Doodle Market</h1>
-      <p className='muted'>Discover and share amazing doodles!</p>
-      {loading && <LoadingSpinner />}
-      {error && (
-        <pre>
-          <code className='error'>Error: {error}</code>
-        </pre>
-      )}
-      {doodles && doodles.length > 0 && (
-        <div className='grid'>
-          {doodles.map((doodle) => (
-            <DoodleCard key={doodle.id} {...doodle} />
-          ))}
-        </div>
-      )}
+    <div className='flex'>
+      <div className='flex-auto'>
+        <h1>Welcome to Doodle Market</h1>
+        <p className='muted'>Discover and share amazing doodles!</p>
+        {loading && <LoadingSpinner />}
+        {error && (
+          <pre>
+            <code className='error'>Error: {error}</code>
+          </pre>
+        )}
+        {doodles && doodles.length > 0 && (
+          <div className='grid'>
+            {doodles.map((doodle) => (
+              <DoodleCard key={doodle.id} {...doodle} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

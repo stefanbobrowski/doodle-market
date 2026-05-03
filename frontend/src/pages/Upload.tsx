@@ -1,9 +1,11 @@
 import { useState, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useAuditLog } from '../context/AuditLogContext';
 
 const Upload = () => {
   const { user, token } = useAuth();
+  const { refreshAuditLog } = useAuditLog();
   const navigate = useNavigate();
 
   const [title, setTitle] = useState('');
@@ -64,6 +66,7 @@ const Upload = () => {
       }
 
       const doodle = await res.json();
+      refreshAuditLog();
       navigate(`/doodle/${doodle.id}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Upload failed');

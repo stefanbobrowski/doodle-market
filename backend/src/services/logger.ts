@@ -3,13 +3,19 @@ import path from 'path';
 
 const logFile = path.join(process.cwd(), 'logs', 'audit.json');
 
-export const logEvent = (event: string, data: any) => {
+interface LogUser {
+  id?: number;
+  username?: string;
+}
+
+export const logEvent = (event: string, data: any, user?: LogUser) => {
   const logEntry = {
     timestamp: new Date().toISOString(),
     event,
+    userId: user?.id,
+    username: user?.username || 'Anonymous',
     data,
   };
-  // Append to file (create if doesn't exist)
   const logs = fs.existsSync(logFile)
     ? JSON.parse(fs.readFileSync(logFile, 'utf-8'))
     : [];

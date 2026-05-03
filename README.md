@@ -24,7 +24,7 @@ A full-stack Vite, React, TypeScript, Express app for uploading, selling, and ra
 - **JWT Auth**: Login returns a signed JWT (24h expiry) stored in localStorage and sent as a Bearer token on authenticated requests.
 - **Demo Accounts**: Two preset user accounts (`pixel_pete`, `sketch_sam`) with quick-fill buttons on the login page. Admin account is intentionally not shown on the login UI.
 - **Admin Dashboard**: Admin-only page to reset the entire app to seed state and wipe user-uploaded doodles, restores 5 seed doodles, and resets all account balances.
-- **Audit Logging**: Purchases and key events are appended to `logs/audit.json` with timestamps.
+- **Audit Logging**: Key events (uploads, purchases, edits, deletes, likes, views, resets) are appended to `logs/audit.json` with timestamps, usernames, and event data. A collapsible sidebar on every page displays the live log with color-coded event types (purchase, added, deleted, updated, liked). Entries can be manually refreshed.
 - **Rate Limiting**: Upload endpoint is rate-limited per IP (5/hour) via `express-rate-limit`.
 - **Persistent Storage**: Synchronous SQLite via `better-sqlite3`. DB auto-creates and seeds on first run.
 - **Endpoint Testing**: Backend API tests with Vitest and Supertest, running against an in-memory SQLite database to keep tests isolated from real data.
@@ -32,10 +32,10 @@ A full-stack Vite, React, TypeScript, Express app for uploading, selling, and ra
 ## Tech Stack
 
 - **Frontend**: Vite, React, TypeScript, SCSS
-- **Backend**: Express.js, TypeScript, ESM (`tsx` in dev)
+- **Backend**: Express.js, TypeScript, ESM
 - **Database**: better-sqlite3 (SQLite)
 - **Auth**: jsonwebtoken, bcryptjs
-- **Email**: Resend API (`resend` SDK)
+- **Email**: Resend API
 - **File Uploads**: multer
 - **Rate Limiting**: express-rate-limit
 - **Testing**: Vitest, Supertest
@@ -69,3 +69,35 @@ A full-stack Vite, React, TypeScript, Express app for uploading, selling, and ra
 
 - `POST /admin/reset` — Reset all doodles to seed + restore all balances _(admin only)_
 - `POST /admin/reset-balance/:userId` — Reset a single user's balance _(admin only)_
+
+### Audit Log
+
+- `GET /audit-log` — Get the most recent 100 audit log entries (newest first)
+
+## Getting Started
+
+### Setup
+
+```bash
+# 1. Clone the repo
+git clone <repo-url>
+cd doodle-market
+
+# 2. Install dependencies
+cd backend && npm install
+cd ../frontend && npm install
+
+# 3. Configure environment
+cp backend/.env.example backend/.env
+# Edit if needed — defaults work out of the box
+
+# 4. Start the backend (port 7777)
+cd backend && npm run dev
+
+# 5. Start the frontend (port 5173)
+cd frontend && npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173). The database is created and seeded automatically on first run.
+
+> **Email**: Purchase confirmation emails require a [Resend](https://resend.com) API key set as `RESEND_API_KEY` in `backend/.env`. Purchases still work without it — the email step is skipped.

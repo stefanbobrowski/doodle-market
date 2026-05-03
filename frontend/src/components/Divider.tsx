@@ -7,9 +7,7 @@ const Divider = ({
   spacing = 'md',
   orientation = 'horizontal',
 }: DividerProps) => {
-  return (
-    <hr className={`divider ${orientation} divider--spacing-${spacing}`} />
-  );
+  return <hr className={`divider ${orientation} spacing-${spacing}`} />;
 };
 
 export default Divider;

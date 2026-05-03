@@ -13,6 +13,10 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background-color: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,6 +26,10 @@ header {
   nav {
     display: flex;
     gap: 16px;
+
+    a {
+      white-space: nowrap;
+    }
   }
 }
 
@@ -29,6 +37,7 @@ header {
   display: flex;
   align-items: center;
   gap: 16px;
+  white-space: nowrap;
 }
 
 .header-user {
@@ -69,6 +78,10 @@ footer {
   gap: 16px;
 }
 
+.flex-auto {
+  flex: 1;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
@@ -92,4 +105,58 @@ footer {
 .back-link {
   display: inline-block;
   margin-bottom: 32px;
+}
+
+// About page
+
+.about-page {
+  max-width: 760px;
+
+  .ascii-art {
+    font-family: monospace;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--code-color);
+    background: rgba(2, 221, 79, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 16px 20px;
+    margin: 24px 0;
+    overflow-x: auto;
+  }
+
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .about-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 0.9rem;
+
+    th,
+    td {
+      text-align: left;
+      padding: 8px 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    th {
+      background: rgba(255, 255, 255, 0.04);
+      font-weight: 600;
+    }
+  }
 }

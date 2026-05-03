@@ -55,7 +55,8 @@ export const getDoodleById = (id: number): Doodle | undefined =>
     | undefined;
 
 export const addDoodle = (
-  newDoodleData: Omit<Doodle, 'id' | 'views' | 'likes'>
+  newDoodleData: Omit<Doodle, 'id' | 'views' | 'likes'>,
+  user?: { id?: number; username?: string }
 ): Doodle => {
   if (
     !newDoodleData.title ||
@@ -78,13 +79,14 @@ export const addDoodle = (
     .run(newDoodleData);
 
   const newDoodle = getDoodleById(result.lastInsertRowid as number)!;
-  logEvent('Doodle Added', newDoodle);
+  logEvent('Doodle Added', newDoodle, user);
   return newDoodle;
 };
 
 export const updateDoodle = (
   id: number,
-  updateData: Partial<Omit<Doodle, 'id' | 'views' | 'likes'>>
+  updateData: Partial<Omit<Doodle, 'id' | 'views' | 'likes'>>,
+  user?: { id?: number; username?: string }
 ): Doodle | null => {
   const doodle = getDoodleById(id);
   if (!doodle) return null;
@@ -96,15 +98,18 @@ export const updateDoodle = (
     ...updateData,
     id,
   });
-  logEvent('Doodle Updated', updateData);
+  logEvent('Doodle Updated', updateData, user);
   return getDoodleById(id)!;
 };
 
-export const deleteDoodle = (id: number): boolean => {
+export const deleteDoodle = (
+  id: number,
+  user?: { id?: number; username?: string }
+): boolean => {
   const doodle = getDoodleById(id);
   if (!doodle) return false;
   db.prepare('DELETE FROM doodles WHERE id = ?').run(id);
-  logEvent('Doodle Deleted', doodle);
+  logEvent('Doodle Deleted', doodle, user);
   return true;
 };
 

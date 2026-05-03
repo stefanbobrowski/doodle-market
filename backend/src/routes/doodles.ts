@@ -47,12 +47,15 @@ router.post(
     try {
       const imagePath = req.file ? `/uploads/${req.file.filename}` : '';
 
-      const newDoodle = addDoodle({
-        ...req.body,
-        imagePath,
-        price: parseFloat(req.body.price),
-        userId: req.user!.id,
-      });
+      const newDoodle = addDoodle(
+        {
+          ...req.body,
+          imagePath,
+          price: parseFloat(req.body.price),
+          userId: req.user!.id,
+        },
+        { id: req.user!.id, username: req.user!.username }
+      );
       res.status(201).json(newDoodle);
     } catch (error) {
       res.status(400).json({ error: (error as Error).message });
@@ -91,7 +94,10 @@ router.patch(
     if (req.body.price) {
       updateData.price = parseFloat(req.body.price);
     }
-    const updatedDoodle = updateDoodle(+req.params.id, updateData);
+    const updatedDoodle = updateDoodle(+req.params.id, updateData, {
+      id: userId,
+      username: req.user!.username,
+    });
     if (!updatedDoodle) return res.status(404).send('Doodle not found');
     res.json(updatedDoodle);
   }
@@ -117,7 +123,10 @@ router.delete('/:id', authenticate, (req: AuthRequest, res) => {
     });
   }
 
-  const deleted = deleteDoodle(+req.params.id);
+  const deleted = deleteDoodle(+req.params.id, {
+    id: userId,
+    username: req.user!.username,
+  });
   if (!deleted) return res.status(404).send('Doodle not found');
   res.status(204).send();
 });

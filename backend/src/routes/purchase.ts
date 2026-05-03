@@ -33,14 +33,18 @@ router.post('/:id/purchase', authenticate, async (req: AuthRequest, res) => {
     });
   }
 
-  logEvent('Doodle Purchased', {
-    doodleId: doodle.id,
-    title: doodle.title,
-    price: doodle.price,
-    buyerId: userId,
-    buyerUsername: req.user!.username,
-    email,
-  });
+  logEvent(
+    'Doodle Purchased',
+    {
+      doodleId: doodle.id,
+      title: doodle.title,
+      price: doodle.price,
+      buyerId: userId,
+      buyerUsername: req.user!.username,
+      email,
+    },
+    { id: userId, username: req.user!.username }
+  );
 
   // Don't fail the purchase if email errors
   sendPurchaseConfirmation({

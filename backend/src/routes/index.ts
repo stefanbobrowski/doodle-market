@@ -4,6 +4,7 @@ import interactionsRouter from './interactions.js';
 import authRouter from './auth.js';
 import purchaseRouter from './purchase.js';
 import adminRouter from './admin.js';
+import auditRouter from './audit.js';
 
 const router = express.Router();
 
@@ -26,5 +27,8 @@ router.use('/admin', adminRouter);
 router.use('/doodles', doodlesRouter);
 router.use('/doodles', interactionsRouter);
 router.use('/doodles', purchaseRouter);
+
+// Audit routes
+router.use('/', auditRouter);
 
 export default router;
