@@ -1,0 +1,33 @@
+steps:
+  # Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/${PROJECT_ID}/doodle-market-repo/doodle-market:$SHORT_SHA'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/${PROJECT_ID}/doodle-market-repo/doodle-market:latest'
+      - '.'
+
+  # Push to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'us-central1-docker.pkg.dev/${PROJECT_ID}/doodle-market-repo/doodle-market:$SHORT_SHA'
+
+  # Deploy to Cloud Run
+  - name: 'gcr.io/cloud-builders/run'
+    args:
+      - 'deploy'
+      - 'doodle-market'
+      - '--image=us-central1-docker.pkg.dev/${PROJECT_ID}/doodle-market-repo/doodle-market:$SHORT_SHA'
+      - '--region=us-central1'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
+
+images:
+  - 'us-central1-docker.pkg.dev/${PROJECT_ID}/doodle-market-repo/doodle-market:$SHORT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  machineType: 'N1_HIGHCPU_8'
