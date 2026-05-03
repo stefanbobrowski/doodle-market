@@ -83,9 +83,9 @@ A full-stack Vite, React, TypeScript, Express app for uploading, selling, and ra
 git clone https://github.com/stefanbobrowski/doodle-market.git
 cd doodle-market
 
-# 2. Install dependencies
+# 2. Install dependencies (Split Terminal)
 cd backend && npm install
-cd ../frontend && npm install
+cd frontend && npm install
 
 # 3. Configure environment
 cp backend/.env.example backend/.env
