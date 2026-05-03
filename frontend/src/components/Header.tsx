@@ -58,7 +58,9 @@ export const Header = () => {
                 <span className='user-role-badge'>admin</span>
               )}
             </span>
-            <span className='header-balance'>${user.balance.toFixed(2)}</span>
+            <span className='header-balance'>
+              ${user.balance?.toFixed(2) ?? '0.00'}
+            </span>
             <Button onClick={handleLogout}>Logout</Button>
           </>
         ) : (

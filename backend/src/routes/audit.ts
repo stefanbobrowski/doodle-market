@@ -7,6 +7,7 @@ const logFile = path.join(process.cwd(), 'logs', 'audit.json');
 
 router.get('/audit-log', (req, res) => {
   try {
+    if (!fs.existsSync(logFile)) return res.json([]);
     const logs = JSON.parse(fs.readFileSync(logFile, 'utf-8'));
     const limit = parseInt(req.query.limit as string) || 100;
     res.json(logs.slice(-limit).reverse());

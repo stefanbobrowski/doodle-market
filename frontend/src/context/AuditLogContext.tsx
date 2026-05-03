@@ -20,7 +20,7 @@ export const AuditLogProvider = ({ children }: { children: ReactNode }) => {
   const refreshAuditLog = () => {
     fetch('/api/audit-log')
       .then((r) => r.json())
-      .then(setLogs)
+      .then((data) => setLogs(Array.isArray(data) ? data : []))
       .catch(console.error);
   };
 
