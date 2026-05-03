@@ -15,7 +15,7 @@ const publicDir = path.join(process.cwd(), 'public');
 app.use(express.static(publicDir));
 
 // SPA fallback - let React Router handle all non-API routes
-app.get('*', (_req, res) => {
+app.use((_req, res) => {
   res.sendFile(path.join(publicDir, 'index.html'));
 });
 
