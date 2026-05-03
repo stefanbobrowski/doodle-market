@@ -4,7 +4,7 @@
     "title": "Funny Cat Doodle",
     "description": "A cute doodle of a cat.",
     "price": 5.99,
-    "imagePath": "/uploads/cat.jpg",
+    "imagePath": "/images/cat.jpg",
     "views": 150,
     "likes": 30,
     "userId": 1
@@ -14,7 +14,7 @@
     "title": "Sun Doodle",
     "description": "A detailed doodle of a bright sun.",
     "price": 7.5,
-    "imagePath": "/uploads/sun.jpg",
+    "imagePath": "/images/sun.jpg",
     "views": 200,
     "likes": 45,
     "userId": 1
@@ -24,7 +24,7 @@
     "title": "Abstract Doodle",
     "description": "An abstract doodle with vibrant colors. It has smaller dimensions and a much longer description to test the text truncation in the UI. This doodle is perfect for those who love modern art and want to add a splash of color to their space.",
     "price": 10.0,
-    "imagePath": "/uploads/dotsinspace.png",
+    "imagePath": "/images/dotsinspace.png",
     "views": 300,
     "likes": 60,
     "userId": 1
@@ -34,7 +34,7 @@
     "title": "Computer Doodle",
     "description": "A charming doodle of a retro computer. pixel_pete's signature piece.",
     "price": 6.5,
-    "imagePath": "/uploads/computer-doodle.png",
+    "imagePath": "/images/computer-doodle.png",
     "views": 42,
     "likes": 8,
     "userId": 2
@@ -44,7 +44,7 @@
     "title": "Mystery Man Doodle",
     "description": "A mysterious figure captured in sketch_sam's unmistakable style.",
     "price": 8.0,
-    "imagePath": "/uploads/mystery-man-doodle.png",
+    "imagePath": "/images/mystery-man-doodle.png",
     "views": 57,
     "likes": 12,
     "userId": 3
