@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /api/
+Disallow: /admin
+Disallow: /upload
+
+Allow: /
+
+Sitemap: https://YOUR_CLOUD_RUN_URL/sitemap.xml

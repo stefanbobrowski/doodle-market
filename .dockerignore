@@ -1,0 +1,14 @@
+node_modules
+**/node_modules
+dist
+**/dist
+.env
+**/.env
+backend/data/*.db
+backend/logs/
+backend/uploads/
+frontend/dist
+.git
+*.md
+coverage
+**/*.tsbuildinfo
