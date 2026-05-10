@@ -101,3 +101,17 @@ cd frontend && npm run dev
 Open [http://localhost:5173](http://localhost:5173). The database is created and seeded automatically on first run.
 
 > **Email**: Purchase confirmation emails require a [Resend](https://resend.com) API key set as `RESEND_API_KEY` in `backend/.env`. Purchases still work without it but the email step is skipped.
+
+## 📄 License
+
+© 2026 Doodle Market. Built by Stefan Bobrowski. All rights reserved.
+
+---
+
+## Author
+
+**Stefan Bobrowski**
+
+Github: [https://github.com/stefanbobrowski](https://github.com/stefanbobrowski)  
+Portfolio: [https://stefanbobrowski.com](https://stefanbobrowski.com)  
+Email: stefanbobrowski1@gmail.com
