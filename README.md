@@ -102,9 +102,13 @@ Open [http://localhost:5173](http://localhost:5173). The database is created and
 
 > **Email**: Purchase confirmation emails require a [Resend](https://resend.com) API key set as `RESEND_API_KEY` in `backend/.env`. Purchases still work without it but the email step is skipped.
 
+## Repo
+
+[https://github.com/stefanbobrowski/doodle-market](https://github.com/stefanbobrowski/doodle-market)
+
 ## 📄 License
 
-© 2026 Doodle Market. Built by Stefan Bobrowski. All rights reserved.
+See [LICENSE](LICENSE) file for details. All rights reserved.
 
 ---
 
