@@ -1,24 +1,22 @@
 # ── Stage 1: Build frontend ───────────────────────────────────────────────────
-FROM node:22-alpine AS frontend-build
+FROM node:23-alpine AS frontend-build
 WORKDIR /frontend
-RUN npm install -g npm@11
 COPY frontend/package*.json ./
 RUN npm ci
 COPY frontend/ ./
 RUN npm run build
 
 # ── Stage 2: Build backend + prune to prod deps ───────────────────────────────
-FROM node:22-alpine AS backend-build
+FROM node:23-alpine AS backend-build
 RUN apk add --no-cache python3 make g++
 WORKDIR /backend
-RUN npm install -g npm@11
 COPY backend/package*.json ./
 RUN npm ci
 COPY backend/ ./
 RUN npm run build && npm prune --omit=dev
 
 # ── Stage 3: Production image ─────────────────────────────────────────────────
-FROM node:22-alpine AS production
+FROM node:23-alpine AS production
 WORKDIR /app
 
 # Production node_modules (native modules already compiled for linux/alpine)
