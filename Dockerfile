@@ -1,6 +1,7 @@
 # ── Stage 1: Build frontend ───────────────────────────────────────────────────
 FROM node:22-alpine AS frontend-build
 WORKDIR /frontend
+RUN npm install -g npm@11
 COPY frontend/package*.json ./
 RUN npm ci
 COPY frontend/ ./
@@ -10,6 +11,7 @@ RUN npm run build
 FROM node:22-alpine AS backend-build
 RUN apk add --no-cache python3 make g++
 WORKDIR /backend
+RUN npm install -g npm@11
 COPY backend/package*.json ./
 RUN npm ci
 COPY backend/ ./
