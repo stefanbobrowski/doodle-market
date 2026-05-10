@@ -1,6 +1,7 @@
 # ── Stage 1: Build frontend ───────────────────────────────────────────────────
 FROM node:23-slim AS frontend-build
 WORKDIR /frontend
+RUN npm install -g npm@11
 COPY frontend/package*.json ./
 RUN npm ci
 COPY frontend/ ./
@@ -8,6 +9,7 @@ RUN npm run build
 
 # ── Stage 2: Build backend + prune to prod deps ───────────────────────────────
 FROM node:23-slim AS backend-build
+RUN npm install -g npm@11
 RUN apk add --no-cache python3 make g++
 WORKDIR /backend
 COPY backend/package*.json ./
