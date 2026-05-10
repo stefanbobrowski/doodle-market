@@ -10,7 +10,7 @@ RUN npm run build
 # ── Stage 2: Build backend + prune to prod deps ───────────────────────────────
 FROM node:23-slim AS backend-build
 RUN npm install -g npm@11
-RUN apk add --no-cache python3 make g++
+RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
 WORKDIR /backend
 COPY backend/package*.json ./
 RUN npm ci
